@@ -18,8 +18,8 @@ class MySite extends ConsumerWidget {
           themeMode: ThemeMode.dark,
           theme: ThemeData(
             useMaterial3: true,
-            colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
-            fontFamily: 'Montserrat'
+            fontFamily: 'Montserrat',
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.red, brightness: Brightness.dark),
           ),
           home: const BasePage(),
         );

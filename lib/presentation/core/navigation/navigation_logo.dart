@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:matest/presentation/core/responsive.dart';
+import 'package:matest/presentation/core/responsibility/responsive_extension.dart';
 
 class NavigationLogo extends StatelessWidget {
   const NavigationLogo({Key? key}) : super(key: key);

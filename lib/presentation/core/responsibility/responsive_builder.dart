@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:matest/presentation/core/responsibility/responsive_extension.dart';
 
-class Responsive extends StatelessWidget {
+class ResponsiveBuilder extends StatelessWidget {
   final Widget mobile;
   final Widget tablet;
   final Widget desktop;
 
-  const Responsive({
+  const ResponsiveBuilder({
     Key? key,
     required this.mobile,
     required this.tablet,
@@ -22,14 +23,4 @@ class Responsive extends StatelessWidget {
       return mobile;
     }
   }
-}
-
-extension ResponsiveExtension on BuildContext {
-  bool get isMobile => MediaQuery.of(this).size.width <= 500;
-
-  bool get isTablet =>
-      MediaQuery.of(this).size.width < 1024 &&
-      MediaQuery.of(this).size.width >= 600;
-
-  bool get isDesktop => MediaQuery.of(this).size.width >= 1024;
 }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-import '../core/responsive.dart';
+import 'responsibility/responsive_builder.dart';
 import 'navigation/scroll_provider.dart';
 import 'navigation/navigation_bar_desktop.dart';
 import 'navigation/navigation_bar_mobile.dart';
@@ -20,7 +20,7 @@ class BasePage extends ConsumerWidget {
     return Scaffold(
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(110),
-        child: Responsive(
+        child: ResponsiveBuilder(
           mobile: NavigationBarMobile(),
           desktop: NavigationBarDesktop(),
           tablet: NavigationBarTablet(),

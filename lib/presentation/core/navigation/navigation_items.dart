@@ -12,8 +12,8 @@ final navigationItemsProvider = Provider<List<NavigationItem>>((ref) {
   return [
     const NavigationItem(label: 'About me', index: 0, icon: Icons.account_box_outlined, section: AboutMe(),),
     const NavigationItem(label: 'Skills', index: 1, icon: Icons.accessibility, section: Skills(),),
-    const NavigationItem(label: 'Projects', index: 2, icon: Icons.code, section: Projects(),),
-    const NavigationItem(label: 'Work experience', index: 3, icon: Icons.work, section: WorkExperience(),),
-    const NavigationItem(label: 'Contact', index: 4, icon: Icons.contact_mail, section: Contact(),),
+   // const NavigationItem(label: 'Projects', index: 2, icon: Icons.code, section: Projects(),),
+   // const NavigationItem(label: 'Work experience', index: 3, icon: Icons.work, section: WorkExperience(),),
+    const NavigationItem(label: 'Contact', index: 2, icon: Icons.contact_mail, section: Contact(),),
   ];
 });

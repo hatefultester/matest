@@ -34,7 +34,7 @@ class _NavBarActionButtonState extends ConsumerState<NavigationActionButton> {
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 5),
         decoration: BoxDecoration(
-          gradient: isHover ? const LinearGradient(colors: [Colors.blue, Colors.green]) : null,
+          gradient: isHover ? LinearGradient(colors: [theme.colorScheme.onTertiary, theme.colorScheme.tertiaryContainer]) : null,
           borderRadius: BorderRadius.circular(5.0),
         ),
         child: InkWell(
