@@ -2,14 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:matest/presentation/core/helpers/link_helper.dart';
 
+import 'contact_card.dart';
+import 'contact_info.dart';
+
 class Contact extends ConsumerWidget {
   const Contact({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    return Center(
-      child: Container(
-        margin: const EdgeInsets.all(50.0),
+    return Container(
+      height: 200,
+      width: double.infinity,
+      color: Theme.of(context).colorScheme.primaryContainer,
+      child: Center(
         child: Wrap(
             alignment: WrapAlignment.center,
             children: [
@@ -42,63 +47,6 @@ class Contact extends ConsumerWidget {
                 ],
               ),
             ]
-        ),
-      ),
-    );
-  }
-}
-
-class ContactCard extends StatelessWidget {
-  final List<ContactInfo> contactInfo;
-
-  const ContactCard({Key? key, required this.contactInfo}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: SizedBox(
-        width: 400,
-        child: Card(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: contactInfo.map((info) => info.build(context)).toList(),
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class ContactInfo {
-  final String title;
-  final IconData icon;
-  final VoidCallback? onTap;
-  final String? subtitle;
-
-  ContactInfo({
-    required this.title,
-    required this.icon,
-    this.onTap,
-    this.subtitle,
-  });
-
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: SizedBox(
-        height: 60,
-        child: Center(
-          child: ListTile(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-            leading: Icon(icon),
-            title: Text(title),
-            subtitle: subtitle != null ? Text(subtitle!) : null,
-            onTap: onTap,
-          ),
         ),
       ),
     );

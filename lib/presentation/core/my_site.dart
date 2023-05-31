@@ -19,7 +19,7 @@ class MySite extends ConsumerWidget {
           theme: ThemeData(
             useMaterial3: true,
             fontFamily: 'Montserrat',
-              colorScheme: ColorScheme.fromSeed(seedColor: Colors.red, brightness: Brightness.dark),
+              colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlueAccent, brightness: Brightness.dark, primary: Colors.blueAccent),
           ),
           home: const BasePage(),
         );
